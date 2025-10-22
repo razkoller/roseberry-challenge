@@ -30,6 +30,45 @@ A simple and elegant task management application built with React Native and Nod
 - Docker & Docker Compose
 - Containerized services
 
+## A word about my usage of AI when developing it: 
+
+AI is used throughout my workflow. My personal AI of choice for programming is Claude.AI. I use both the Claude desktop app and Claude Code which is integrated into my IDE (which is WebStorm).
+
+I use AI for planning and for shortcuts when I have to write standard or common code, which when building a CRUD application does happen a lot.
+
+In this case I started by showing Claude the assignment and asking for recommendations on structure and strategy.
+
+The second stage is what I call 'the grilling'. I go over the suggestions and I ask questions about each of them. I ask it why it chose this way and not another way, is it common practice, is it best practice, what would be the alternatives.
+
+Then I start building.
+
+I prefer to use AI as a shortcut when I have to write a bunch of NodeJS/Express files which are common and don't change much in projects like that (for example, server.ts or config/database.ts, or routes/index.ts, etc...),
+or when you need to quickly fillout a bunch of attributes, like when writing Swagger's config file.
+
+So after creating the structure and starting the files, I used Claude Code to quickly complete them.
+For that I tell Claude what I am trying to achieve and it looks at the structure and suggests edits and additions.
+
+For simple one/two components or files I would usually allow edits to be approved automatically, then follow up with questions or make any changes to the code myself.
+
+When it's something like this, when I need it to generate code in multiple files, I prefer to look at the suggestions before I approve them. Which is what I did in this case.
+
+## No Migrations ##
+
+This is an interesting bit I thought I'd mention. Claude suggested to add a try/catch block to the initDatabase function in /config/database.ts, where we check if the tables exist, and if not - create them.
+
+I thought it was a weird suggestion, as the more obvious way would be to have migrations, and not try to build the tables every time the app begins.
+
+Claude justified its choice by pointing out that the task description clearly states:
+
+`"After cloning, the project should run using a single command: docker compose up --build"`
+
+So that was its solution.
+
+Which I found very funny. I said to it that it could have just added the migrations to the docker build and it would also satisfy the 'one command' requirement, which it agreed with me about. But it said this way was simpler.
+
+So I'm leaving it in, expressing that I would have gone a different route, as a demonstration of why the 'grilling' stage is so important, and how AI can be too literal at times or come to not the best conclusions. Which is why the human touch is still needed...
+
+
 ## Prerequisites
 
 Before running this application, ensure you have the following installed:
