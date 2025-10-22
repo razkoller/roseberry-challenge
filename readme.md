@@ -2,6 +2,12 @@
 
 A simple and elegant task management application built with React Native and Node.js, featuring user authentication and full CRUD operations.
 
+<p align="center">
+  <img src="screen1.png" width="250" />
+  <img src="screen2.png" width="188" />
+  <img src="screen3.png" width="191" />
+</p>
+
 ## Features
 
 - User registration and authentication with JWT
