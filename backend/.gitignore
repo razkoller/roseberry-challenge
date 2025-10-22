@@ -1,0 +1,34 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+coverage/
+```
+
+**2. Fix `mobile/.gitignore`:**
+```
+node_modules/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+.DS_Store
+*.log
+.env
+```
+
+**3. Fix root `.gitignore`:**
+```
+.env
+.DS_Store
+*.log
+node_modules/
+.vscode/
+.idea/
